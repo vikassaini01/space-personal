@@ -45,7 +45,7 @@ else
 fi
 
 #easy_install pip
-pip -r /srv/space/requirements.txt
+pip install -r /srv/space/requirements.txt
 
 echo -n
 echo -e "$OK Adding MongoDB repo, your server is about to become #webscale $ENDC"
