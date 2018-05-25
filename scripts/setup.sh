@@ -33,6 +33,7 @@ echo -e "$OK Updating $OS packages... $ENDC"
 
 if [ "$OS" == "centos" ]
   then
+    sed -i 's/facebook/nluug.nl/g'  /etc/yum/pluginconf.d/fastestmirror.conf
     yum update -y
     yum install -y python-setuptools
 else
@@ -67,7 +68,7 @@ echo -e "$OK Getting package for RabbitMQ... $ENDC"
 
 if [ "$OS" == "centos" ]
   then
-    rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+    yum install epel-release -y
     yum update -y
     yum install -y erlang
     rpm --import http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
