@@ -35,7 +35,7 @@ if [ "$OS" == "centos" ]
   then
     sed -i 's/facebook/nluug.nl/g'  /etc/yum/pluginconf.d/fastestmirror.conf
     yum update -y
-    yum install -y python-setuptools
+    yum install -y python-setuptools python-pip
 else
   apt-get update
   apt-get install -y python-setuptools
