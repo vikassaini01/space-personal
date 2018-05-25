@@ -39,13 +39,19 @@ if [ "$OS" == "centos" ]
     yum update -y
     yum install epel-release -y
     yum install -y python-setuptools python-pip gcc
+    #easy_install pip
 else
   apt-get update
   apt-get install -y python-setuptools
 fi
 
-#easy_install pip
+echo -n
+echo -e "$OK Installing python requirements from requirements.txt... $ENDC"
+
 pip install -r /srv/space/requirements.txt
+
+echo -n
+echo -e "$OK Done. $ENDC"
 
 echo -n
 echo -e "$OK Adding MongoDB repo, your server is about to become #webscale $ENDC"
@@ -123,14 +129,6 @@ echo -n
 echo -e "$OK Creating symlink for init.d file... $ENDC"
 
 ln -s /srv/space/scripts/space.sh /etc/init.d/space
-
-echo -n
-echo -e "$OK Done. $ENDC"
-
-echo -n
-echo -e "$OK Installing python requirements from requirements.txt... $ENDC"
-
-pip install -r /srv/space/requirements.txt
 
 echo -n
 echo -e "$OK Done. $ENDC"
