@@ -34,6 +34,7 @@ echo -e "$OK Updating $OS packages... $ENDC"
 if [ "$OS" == "centos" ]
   then
     sed -i 's/facebook/nluug.nl/g'  /etc/yum/pluginconf.d/fastestmirror.conf
+    yum clean all
     yum update -y
     yum install epel-release -y
     yum install -y python-setuptools python-pip
