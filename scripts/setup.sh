@@ -38,7 +38,7 @@ if [ "$OS" == "centos" ]
     yum clean all
     yum update -y
     yum install epel-release -y
-    yum install -y python-setuptools python-pip
+    yum install -y python-setuptools python-pip gcc
 else
   apt-get update
   apt-get install -y python-setuptools
