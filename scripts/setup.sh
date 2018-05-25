@@ -44,7 +44,7 @@ else
   apt-get install -y python-setuptools
 fi
 
-easy_install pip
+#easy_install pip
 pip -r /srv/space/requirements.txt
 
 echo -n
