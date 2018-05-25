@@ -178,6 +178,9 @@ sh /srv/space/scripts/celery.sh
 echo -n
 echo -e "$OK Starting disk configuration script... $ENDC"
 
+pip uninstall requests
+pip install requests
+
 echo -n
 echo -e "----------------------------------------"
 echo -e $OK "All done, enjoy!" $ENDC
