@@ -6,9 +6,6 @@ WARNING='\033[93m'
 FAIL='\033[91m'
 ENDC='\033[0m'
 
-yum install screen -y
-screen -S vikas
-
 # Determine Distribution
 if [ -f /etc/debian_version ]
   then
